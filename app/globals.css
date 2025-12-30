@@ -99,6 +99,15 @@ body {
   margin-bottom: 20px;
 }
 
+.form-row {
+  display: flex;
+  gap: 16px;
+}
+
+.form-group.half {
+  flex: 1;
+}
+
 .label {
   display: block;
   font-size: 14px;
@@ -119,6 +128,10 @@ body {
 .input:focus {
   outline: none;
   border-color: #1F4E79;
+}
+
+.input::placeholder {
+  color: #aaa;
 }
 
 .button {
@@ -175,6 +188,49 @@ body {
   color: #721c24;
 }
 
+.stats-box {
+  background: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  padding: 16px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.stats-box p {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.stats-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.stat-item {
+  text-align: center;
+  flex: 1;
+  padding: 8px 4px;
+  background: white;
+  border-radius: 6px;
+  border: 1px solid #e8e8e8;
+}
+
+.stat-number {
+  display: block;
+  font-size: 24px;
+  font-weight: 700;
+  color: #1F4E79;
+}
+
+.stat-label {
+  display: block;
+  font-size: 11px;
+  color: #666;
+  margin-top: 2px;
+}
+
 .info-box {
   background: #e7f3ff;
   border-left: 4px solid #1F4E79;
@@ -198,4 +254,24 @@ body {
 
 .hidden {
   display: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  .stats-grid {
+    flex-wrap: wrap;
+  }
+  
+  .stat-item {
+    min-width: calc(33% - 8px);
+  }
+  
+  .card {
+    padding: 24px;
+  }
 }
